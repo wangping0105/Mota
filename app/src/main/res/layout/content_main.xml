@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    >
+
+    <com.mota.wp.mota.views.GameStartView
+        android:id="@+id/main_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_y="0dp"
+        android:layout_x="0dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/parentAbszdView"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_y="405dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_size"
+            android:layout_marginBottom="8dp"
+            >
+
+            <!--等级-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_level"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <!--攻击-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attack"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_attack"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <!--防御-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defense"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/defense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_defense"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- hp-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hp"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_hp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exp"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_data"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!--铜钥匙-->
+            <TextView
+                android:id="@+id/copper_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/copper_key"
+                android:textColor="@color/copper"
+                />
+
+            <TextView
+                android:id="@+id/copper_key"
+                android:layout_toRightOf="@id/copper_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/init_data"
+                android:textColor="@color/copper"
+                />
+
+            <!--银钥匙-->
+            <TextView
+                android:id="@+id/silver_key_mapped"
+                android:layout_below="@id/copper_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/silver_key"
+                android:textColor="@color/silver"
+                />
+            <TextView
+                android:id="@+id/silver_key"
+                android:layout_below="@id/copper_key_mapped"
+                android:layout_toRightOf="@id/silver_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/init_data"
+                android:textColor="@color/silver"
+                />
+
+            <!--金钥匙-->
+            <TextView
+                android:id="@+id/gold_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/silver_key_mapped"
+                android:text="@string/gold_key"
+                android:textColor="@color/gold"
+                />
+            <TextView
+                android:id="@+id/gold_key"
+                android:layout_below="@id/silver_key_mapped"
+                android:layout_toRightOf="@id/gold_key_mapped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/init_data"
+                android:textColor="@color/gold"
+                />
+
+        </RelativeLayout>
+
+        <AbsoluteLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/up"
+                android:layout_width="@dimen/dir_btn_size"
+                android:layout_height="@dimen/dir_btn_size"
+                android:layout_x="@dimen/dir_btn_size1"
+
+                android:text="@string/up"
+                />
+
+            <Button
+                android:id="@+id/down"
+                android:layout_width="@dimen/dir_btn_size"
+                android:layout_height="@dimen/dir_btn_size"
+                android:text="@string/down"
+                android:layout_x="@dimen/dir_btn_size1"
+                android:layout_y="@dimen/dir_btn_size2"
+                android:layout_alignParentTop="true" />
+
+            <Button
+                android:id="@+id/left"
+                android:layout_width="@dimen/dir_btn_size"
+                android:layout_height="@dimen/dir_btn_size"
+                android:text="@string/left"
+                android:layout_y="@dimen/dir_btn_size1"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:id="@+id/right"
+                android:layout_width="@dimen/dir_btn_size"
+                android:layout_height="@dimen/dir_btn_size"
+                android:text="@string/right"
+                android:layout_x="@dimen/dir_btn_size2"
+                android:layout_y="@dimen/dir_btn_size1"
+                android:layout_alignParentTop="true" />
+        </AbsoluteLayout>
+    </RelativeLayout>
+</AbsoluteLayout>
